@@ -1,8 +1,7 @@
 import config
 import logging
-
 from aiogram import Bot, Dispatcher, executor, types
-from sqliter3 import SQLighter
+from sqliter3 import Sqlighter
 
 # задаём уровень логов
 logging.basicConfig(level=logging.INFO)
@@ -12,7 +11,7 @@ bot = Bot(token=config.API_TOKEN)
 dp = Dispatcher(bot)
 
 # инициализируем соединение с БД
-db = SQLighter('D:/Python3/telegram_bot/Telegram_bot_news/db.db')
+db = Sqlighter('db.db')
 
 
 # команда активации подписки
